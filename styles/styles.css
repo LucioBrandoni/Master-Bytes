@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+font-family: 'Source Sans 3', sans-serif;
+font-size: 1rem;
+}
+header{
+    height: 23vh;
+    display: flex;
+    flex-flow: row,wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo-main{
+    height: 100px;
+}
+
+.logo-redes{
+    height: 35px;
+}
+li{
+    list-style-type: none;
+}
+
+
+ul{
+
+    display: flex; 
+    gap: 20px;
+    
+}
+
+
+h1{
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+}
+
+h2{
+    font-family: 'Lato', sans-serif ;
+    font-size: 26px;
+}
+
+h3{
+    font-family: 'Lato', sans-serif ;
+    font-size: 20px;
+}
+.precio{
+    font-family: 'Lato', sans-serif ;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+    color: blue;
+}
+
+.productos{
+width:150px;
+height: auto;
+padding: 10px;
+}
+
+.tarea{
+    font-size: 1.2rem;
+    font-style: italic;
+
+}
+
+
+.caracteristica{
+    width: 150px;
+
+}
+
+.banner{
+
+width: 100%;
+height: auto;
+}
+/*estilo general*/
+
+
+main h1, main h2 {
+    text-align: center;
+}
+
+main button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+
+}
+/* seccion productos */
+
+.contenedor-cards {
+    
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    max-width: fit-content;
+    gap: 20px 30px;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.tienda{
+    display: flex;
+    align-items: flex-start;
+    gap:30px;
+    margin-top:50px;
+}
+
+.filtro{
+    
+    width: 200px;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-left: 10px
+}
+.filtro-lista{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    
+}
+/* seccion nosotros */
+
+.contenedor-caracteristicas{
+    display: grid;
+    grid-template-columns: repeat(3,   1fr);
+    max-width: fit-content;
+    margin: 0 auto;
+    
+}
+
+.estilo-caracteristica{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 400px;
+    gap: 10px 30px;
+    padding-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.equipo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: fit-content;
+    margin: 0 auto;
+    gap:30px 50px;
+}
+
+.integrante{
+    position: relative; /* necesario para posicionar la imagen dentro */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+    margin-top: 70px;
+    padding-top: 60px; 
+    background-color: white;
+    border-radius: 10px;
+}
+
+.integrante h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.integrante .tarea {
+    font-style: italic;
+    color: #555;
+    font-weight: 500;
+    text-align: center;
+    margin: 5px 10px;
+}
+
+.integrante p:not(.tarea) {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+    margin: 10px 15px 20px;
+}
+.card-circular{ 
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid white; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -50px; /* sobresale 50px hacia arriba */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Cambia color por defecto de los enlaces */
+.nav-link {
+    color: #3d7bbe !important; 
+    transition: color 0.5s ease;
+    
+}
+
+/* Cambia a verde al pasar el mouse */
+.nav-link:hover {
+    color: #18c5b0 !important; /* verde Bootstrap */
+}
+
+/* Mantiene verde si es la página activa */
+.nav-link.active {
+    color: #18c5b0 !important;
+    font-weight: bold;
+}
+
