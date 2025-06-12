@@ -32,24 +32,24 @@ li{
 ul{
 
     display: flex; 
-    gap: 20px;
+    gap: 25px;
     
 }
 
 
 h1{
     font-family: 'Lato', sans-serif;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 h2{
     font-family: 'Lato', sans-serif ;
-    font-size: 26px;
+    font-size: 22px;
 }
 
 h3{
     font-family: 'Lato', sans-serif ;
-    font-size: 20px;
+    font-size: 18px;
 }
 .precio{
     font-family: 'Lato', sans-serif ;
@@ -78,17 +78,29 @@ padding: 10px;
 
 }
 
-.banner{
+.ajustando-banner {
+    width: 100%; /* ocupa todo el ancho del viewport */
+    display: flex;
+    justify-content: center;
+}
 
-width: 100%;
-height: auto;
+.banner {
+    width: 100%; /* ocupa todo el ancho disponible */
+    height: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 /*estilo general*/
 
 
-main h1, main h2 {
+
+.slogan{
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    gap: 20px;
 }
+
 
 main button {
     display: block;
@@ -96,6 +108,11 @@ main button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    color: #ffffff  ;            
+    border: 2px solid #36d7b7 ; 
+    background-color: #3193bb;
+    font-weight: 500;      
+
 }
 
 .card{
@@ -227,22 +244,43 @@ h1{
     transform: translateX(-50%);
 }
 
+/* inicio */
 
+.bg-custom{
+    background-color: #3193bb;
+    border-radius: 5px;
+}
 /* Cambia color por defecto de los enlaces */
 .nav-link {
-    color: #3d7bbe !important; 
+    color: #ffffff !important; 
     transition: color 0.5s ease;
     
 }
 
 /* Cambia a verde al pasar el mouse */
 .nav-link:hover {
-    color: #18c5b0 !important; /* verde Bootstrap */
+    color: #5bf4e2 !important; 
 }
 
-/* Mantiene verde si es la página activa */
+
 .nav-link.active {
-    color: #18c5b0 !important;
+    color: #5bf4e2 !important;
     font-weight: bold;
 }
 
+.btn-outline-success {
+    color: #ffffff !important;            
+    border: 2px solid #36d7b7 !important; 
+    background-color: transparent ;
+    font-weight: 500;                     
+}
+
+.btn-outline-success:hover {
+    background-color: #36d7b7 !important; 
+    color: white !important;             
+    border-color: #36d7b7 !important;
+}
+
+.slogan{
+
+}
