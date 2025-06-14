@@ -157,17 +157,15 @@ main button:hover {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap:30px;
-    margin-top:50px;
+    gap:50px;
+    
 }
 
 .filtro{
-    
     width: 200px;
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 0 10px #3193bb;
-    margin-left: 20px
 }
 
 .divisor-filtros {
@@ -187,6 +185,7 @@ main button:hover {
     color: #3193bb;
     display: flex;
     flex-flow: column wrap;
+    padding-bottom: 30px;
     
 }
 
@@ -367,5 +366,5 @@ main button:hover {
     height: 2px; 
     background-color:#3193bb; 
     width: 100%; 
-    margin: 5px 0;
+    margin: px 0;
     }
