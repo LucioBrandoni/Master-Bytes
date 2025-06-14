@@ -45,57 +45,83 @@
 
 <main>
 
-    <section>
-        <h1>¿Necesitás ayuda? Estamos para vos</h1>
-    </section>
 
-    <section class="formulario-contacto">
-        <form>
-            <label>Nombre</label>
-            <input type="text" placeholder="John">
-
-            <br>
-
-            <label>Email</label>
-            <input type="email" placeholder="JohnDoe@gmail.com">
-
-            <br>
-
-            <label>Teléfono</label>
-            <input type="number" placeholder="123 - 456789">
-
-            <br>
-
-            <label>Consulta</label>
-            <textarea placeholder="Escribí tu mensaje acá..."></textarea>
-
-            <br>
-
-            <button type="submit">Enviar mensaje</button>
-        </form>
-    </section>
-
-    <section>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.1248433935743!2d-60.633040724360754!3d-32.94771317359272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab1dc9b6d36f%3A0x97b9e9584d94d851!2sMonumento%20Hist%C3%B3rico%20Nacional%20a%20la%20Bandera!5e0!3m2!1ses-419!2sar!4v1747338777158!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-
-    <section>
-        <div class="info-contacto">
-            <ul>
-                <li>¡Hablá con nosotros! <br>(1234) 567 - 8901</li>
-                <li>¡Visitanos! Santa Fe 581, Rosario</li>
-                <li>Atención al público <br>Lunes a Viernes de 9 a 18 hs</li>
-            </ul>
+<section class="container mt-4">
+        <div class="titulo-contacto">
+            <h1>¿Necesitás ayuda? Estamos para vos</h1>
         </div>
+    <form>
+        <div class="row">
+        <div class="col-md-5">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        </div>
+        <div class="col-md-7">
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Consulta</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+        </div>
+        </div>
+        </div>
+    <button type="submit" class="boton-enviar-mensaje mt-2">ENVIAR MENSAJE</button>
+        <article class="row mt-4">
+            <div class="col-12">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.1248433935743!2d-60.633040724360754!3d-32.94771317359272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab1dc9b6d36f%3A0x97b9e9584d94d851!2sMonumento%20Hist%C3%B3rico%20Nacional%20a%20la%20Bandera!5e0!3m2!1ses-419!2sar!4v1747338777158!5m2!1ses-419!2sar"   class="w-100" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            </div>
+        </article> 
+    </form>     
+    
+</section>
+
+
+    <section class="container mt-4">
+        
+            <div class="row text-center text-md-start">
+            <div class="col-md-4">
+                <p>¡Hablá con nosotros!</p>
+                <p>(1234) 567 - 8901</p>
+            </div>
+
+            <div class="col-md-4">
+                <p>¡Visitanos!</p>
+                <p>Santa Fe 581, Rosario</p>
+            </div>
+            <div class="col-md-4">
+                <p>Atención al público</p>
+                <p>Lunes a Viernes de 9 a 18 hs</p>
+            </div>
+            </div>
+            <div class="linea-divisoria-contacto"></div>
+            <!-- 
+            <ul>
+                <li class="contactanos">¡Hablá con nosotros! <br>(1234) 567 - 8901</li>
+                <li class="contactanos">¡Visitanos! Santa Fe 581, Rosario</li>
+                <li class="contactanos">Atención al público <br>Lunes a Viernes de 9 a 18 hs</li>
+            </ul> -->
+        
     </section>
 
-    <section>
-        <h2>RECIBÍ NUESTRAS NOVEDADES</h2>
+    <section class="container mt-4">
+        <h2 class="titulo-novedades">RECIBÍ NUESTRAS NOVEDADES</h2>
         <p>Sumate suscribiéndote con tu e-mail a nuestro newsletter y sé el primero en enterarte de nuevos ingresos.</p>
         <form>
-            <label>Email</label>
-            <input type="email" placeholder="JohnDoe@gmail.com">
-            <button type="submit">¡UNITE!</button>
+            <div class="row">
+            <div class="col-5">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="col-5 align-self-end">
+        <button class="boton-sub" type="submit">¡UNITE!</button>
+        </div>
+        </div>
         </form>
     </section>
 
