@@ -359,28 +359,30 @@ main button:hover {
 
 
 
-
 .footer-principal {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    text-align: center;
-    gap: 15px;
+    justify-content:space-between;
+    flex-flow: row wrap; 
+    width: 100%;
     
+
 }
 
-
-.footer-redes{
+.footer-wrapper {
+  margin-left: -30px;  /* o -15px si Bootstrap 4 */
+  
+}
+.footer-redes {
     display: flex;
-    text-align: end;
-    gap: 0px 30px;
+    gap: 15px;
+
 }
 
 
-.logo-redes{
+.logo-redes {
     height: 24px;
-    
 }
+
 
 .seccion-footer a{
     color: black;
@@ -388,7 +390,7 @@ main button:hover {
 }
 
 .seccion-footer a:hover{
-    color:white;
+    color:white !important;
     background-color: #3193bb;
     padding: 10px;
 
