@@ -10,16 +10,47 @@ body{
 font-family: 'Source Sans 3', sans-serif;
 font-size: 1rem;
 }
-header{
-    height: 23vh;
+.header-flex {
     display: flex;
-    flex-flow: row,wrap;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    height: 20vh; /* o la altura que quieras */
+    flex-wrap: wrap; /* para que se adapte en pantallas pequeñas */
 }
-.logo-main{
-    height: 100px;
+#menu-toggle {
+    display: none;
 }
+
+#btn-hamburguesa {
+    display: none; /* oculto por defecto */
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+}
+.logo-main {
+    max-height: 80px;
+    flex-shrink: 0; /* que no se achique */
+}
+
+.form-busqueda {
+    flex-grow: 1;
+    max-width: 400px; /* limita el ancho para que no ocupe todo */
+    display: flex;
+    gap: 5px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 
 
 li{
@@ -43,12 +74,12 @@ h1{
 
 h2{
     font-family: 'Lato', sans-serif ;
-    font-size: 22px;
+    
 }
 
 h3{
     font-family: 'Lato', sans-serif ;
-    font-size: 18px;
+    
 }
 .precio{
     font-family: 'Lato', sans-serif ;
@@ -111,6 +142,7 @@ main button {
     font-weight: 500;      
     justify-content: center;
 }
+/* seccion productos */
 main button:hover {
     color: #5bf4e2 ; 
 }
@@ -135,7 +167,6 @@ main button:hover {
     justify-content: center;
 
 }
-/* seccion productos */
 
 .contenedor-tarjetas {
     
@@ -187,45 +218,88 @@ main button:hover {
 
 /* seccion nosotros */
 
+.titulo-nosotros{
+    color: #3193bb; 
+    text-align: center;
+}
+
+.slogan-nosotros{
+    text-align: center;
+}
+.historia-nosotros{
+    display :flex;
+    flex-direction: column;
+    justify-content:flex-start;
+
+}
+
+.titulo-caracteristicas{
+    text-align: center;
+    
+}
+
+.titulo-nuestro-equipo{
+    text-align: center;  
+}
+
+
 .contenedor-caracteristicas{
     display: grid;
     grid-template-columns: repeat(3,   1fr);
     max-width: fit-content;
-    margin: 0 auto;
+    margin: 50px auto;
+    gap: 45px;
     
 }
 
+
 .estilo-caracteristica{
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    flex-flow: column ;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
     width: 400px;
-    gap: 10px 30px;
-    padding-left: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    box-shadow: 0 0 7px #3193bb;
+    border-radius: 10px;
+    padding: 10px 30px;
+
 }
 
-.equipo{
+.slogan-caracteristicas{
+    font-size: 22px;
+    font-weight: bolder;
+    text-align: center;
+
+}
+
+.equipo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px
+}
+
+.fila-uno {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: fit-content;
-    margin: 0 auto;
-    gap:30px 50px;
+    gap: 100px;
 }
 
+.fila-dos {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
 .integrante{
     position: relative; /* necesario para posicionar la imagen dentro */
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 250px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+    width: 300px;
+    box-shadow: 0 0 10px #3193bb;
     margin-top: 70px;
     padding-top: 60px; 
     background-color: white;
     border-radius: 10px;
+    
 }
 
 .integrante h3 {
@@ -256,7 +330,7 @@ main button:hover {
     border-radius: 50%;
     object-fit: cover;
     border: 1px solid white; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px #3193bb;
     position: absolute;
     top: -50px; /* sobresale 50px hacia arriba */
     left: 50%;
@@ -326,7 +400,6 @@ main button:hover {
 .linea-divisoria {
     height: 2px; 
     background-color:#3193bb; 
-    width: 100%; 
     margin: 50px 0;
     }
 
@@ -369,8 +442,8 @@ main button:hover {
 }
 
 .footer-wrapper {
-  margin-left: -30px;  /* o -15px si Bootstrap 4 */
-  
+    margin-left: -30px;  
+
 }
 .footer-redes {
     display: flex;
@@ -400,3 +473,117 @@ main button:hover {
     color: black ;
     font-weight: bold;
 }
+
+/* sección carrito */
+
+.carrito-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.carrito-productos, .carrito-totales {
+    flex: 1;
+}
+
+.carrito-totales {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 400px;
+    width: 100%;
+    padding-left: 2rem;
+    border-left: 2px solid #ccc; /* Línea divisoria vertical */
+    gap: 1rem;
+}
+
+.encabezado-productos {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.encabezado-productos,
+.lista-totales {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-totales {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.lista-totales li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+}
+
+.item-producto {
+
+    display: grid;
+    grid-template-columns: 3.5fr  3.5fr 2.5fr 2fr 2fr;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+
+.imagen-producto{
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+.nombre-producto{
+    width: 150px;
+}
+.caracteristica-nombre-producto  {
+    margin: 0;
+    width: 100%;
+}
+.caracteristica-imagen-carrito {
+    width: 100%; 
+    height: auto;
+    display: block;
+
+}
+.boton-eliminar {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+.seguir-comprando{
+    width: 300px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.boton-finalizar{
+    width: 200px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.presupuesto{
+    width: 200px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.linea-divisoria-dos{
+    height: 1px;
+    background-color:  #3193bb;
+    margin: 1rem 0;
+}
+
+
+

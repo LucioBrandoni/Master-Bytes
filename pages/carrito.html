@@ -11,67 +11,119 @@
 </head>
 <body>
 
-<header>
-    <section>
-    <img class="logo-main" src="../assets/logo.png" alt="logo-master-bytes">
-    </section>
-<nav class="navbar bg-custom">
-    <div class="container-fluid">
-        <form class="d-flex me-5" role="search">
-            <input class="form-control me-2 " type="search" placeholder="Buscar un producto" aria-label="Search"/>
-            <button class="btn btn-outline-success " type="submit">Buscar</button>
-        </form>
+<header class="container header-flex">
+        <img class="logo-main" src="../assets/logo.png" alt="logo-master-bytes" />
+    <nav class="navbar bg-custom navbar-espaciada">
+        <div class="container-fluid">
+            <form class="d-flex me-5" role="search">
+                <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar un producto"
+                aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
 
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-            <a class="nav-link" href="../index.html">INICIO</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="../pages/productos.html">PRODUCTOS</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
-            </li>
-            <li class="nav-item">
-            <a href="../pages/carrito.html" class="nav-link active">CARRITO</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="../pages/contacto.html">CONTACTO</a>
-            </li>
-            </ul>
-    </div>
-</nav>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/productos.html">PRODUCTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/carrito.html" class="nav-link active">CARRITO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+        </div>
+    </nav>
 </header>
 
-<main>
+<main class="container">
 
-    <section>
-        <h1>Tu Carrito</h1>
-    </section>
+<section class="carrito">
 
-    <section class="carrito-principal">
-        <div class="carrito-productos">
-            <ul>
-                <li>PRODUCTO</li>
-                <li>PRECIO</li>
-                <li>CANTIDAD</li>
-                <li>SUBTOTAL</li>
-            </ul>
-            <button>SEGUIR COMPRANDO</button>
-        </div>
+<section class="carrito-titulo">
+    <h1>Tu Carrito</h1>
+</section>
 
-        <div class="carrito-totales">
-            <ul>
-                <li>TOTALES DEL CARRITO</li>
-                <li>Subtotal</li>
-                <li>Envío</li>
-                <li>Recargo Tarjeta</li>
-                <li>Total</li>
-            </ul>
-            <button>FINALIZAR COMPRA</button>
-            <button>DESCARGAR PRESUPUESTO</button>
-        </div>
-    </section>
+<section class="carrito-principal">
+
+    <!-- Columna izquierda: productos -->
+    <aside class="carrito-productos">
+
+        <ul class="encabezado-productos">
+            <li>PRODUCTO</li>
+            <li>PRECIO</li>
+            <li>CANTIDAD</li>
+            <li>SUBTOTAL</li>
+        
+        </ul>
+
+    <div class="linea-divisoria-dos"></div>
+
+    <div class="item-producto">
+    
+    <aside class="caracteristica-imagen-carrito" >
+        <img class="imagen-producto" src="../assets/productos/monitor.png" alt="monitor">
+        <article class="caracteristica-nombre-producto">
+        <p class="nombre-producto">
+            Monitor Gamer Acer Nitro 23.8" VG240Y S Widescreen IPS 1080p 180Hz AMD FreeSync Premium
+        </p>
+
+    </article>
+    </aside>
+
+
+        <article>
+            $263.500
+        </article>
+
+        <article>
+            [ - 1 + ]
+        </article>
+
+        <article>
+            $263.500
+        </article>
+
+    </div>
+
+    <div class="linea-divisoria-dos"></div>
+
+        <button class="seguir-comprando">⟵ SEGUIR COMPRANDO</button>
+
+    </aside>
+
+    <!-- Columna derecha: totales -->
+    <aside class="carrito-totales">
+
+        <h2>Totales del Carrito</h2>
+    <div class="linea-divisoria-dos"></div>
+
+        <ul class="lista-totales">
+        
+        <li>Subtotal ............................. $$263.500</li>
+        <li>Envío ....................................... $00</li>
+        <li>Recargo Tarjeta ............................. $00</li>
+        <li>Total ........................................ $$263.500</li>
+        </ul>
+
+    <div class="linea-divisoria-dos"></div>
+
+        <button class="boton-finalizar" >FINALIZAR COMPRA</button>
+        <button class="presupuesto">DESCARGAR PRESUPUESTO</button>
+
+    </aside>
+</section>
+</section>
 
 </main>
 

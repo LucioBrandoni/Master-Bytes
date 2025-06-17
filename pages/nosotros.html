@@ -10,114 +10,133 @@
 </head>
 <body>
 
-<header>
-    <section>
-    <img class="logo-main" src="../assets/logo.png" alt="logo-master-bytes">
-    </section>
-<nav class="navbar bg-custom">
-    <div class="container-fluid">
-        <form class="d-flex me-5" role="search">
-            <input class="form-control me-2 " type="search" placeholder="Buscar un producto" aria-label="Search"/>
-            <button class="btn btn-outline-success " type="submit">Buscar</button>
-        </form>
+<header class="container header-flex">
+        <img class="logo-main" src="../assets/logo.png" alt="logo-master-bytes" />
+    <nav class="navbar bg-custom navbar-espaciada">
+        <div class="container-fluid">
+            <form class="d-flex me-5" role="search">
+                <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar un producto"
+                aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
 
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-            <a class="nav-link" href="../index.html">INICIO</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="../pages/productos.html">PRODUCTOS</a>
-            </li>
-            <li class="nav-item">
-            <a href="../pages/nosotros.html" class="nav-link active">NOSOTROS</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="../pages/carrito.html">CARRITO</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="../pages/contacto.html">CONTACTO</a>
-            </li>
-            </ul>
-    </div>
-</nav>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/productos.html">PRODUCTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../pages/nosotros.html">NOSOTROS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/carrito.html" class="nav-link">CARRITO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+        </div>
+    </nav>
 </header>
 
 <main>
     <section class="container">
+    
+            <h1 class="titulo-nosotros">JUGAMOS EN TU MISMO EQUIPO</h1>
+            <h2 class="slogan-nosotros">Somos gamers, técnicos y apasionados por darte lo mejor</h2>
+            <div class="linea-divisoria"></div>
+        <article class="historia-nosotros">
+            <p>
+                Somos un grupo de apasionados por el hardware, los videojuegos y la tecnología. Esta tienda nació de largas charlas entre amigos que soñaban con armar las mejores PCs posibles, 
+                no solo para jugar, sino también para crear y competir. Con el tiempo, transformamos esa pasión en un e-commerce que combina nuestra experiencia técnica con un enfoque cercano y personalizado.
+            </p>
+            <p>
+                Cada integrante del equipo aporta su conocimiento en áreas como el soporte técnico, la atención al cliente, la selección de componentes y el diseño de equipos,
+                trabajando juntos para que cada computadora armada sea única y esté lista para rendir al máximo desde el primer encendido.
+            </p>  
+        </article>  
+
+        <div class="linea-divisoria"></div>
+
     <section>
-        <h1>JUGAMOS EN TU MISMO EQUIPO</h1>
-        <h2>Somos gamers, técnicos y apasionados por darte lo mejor</h2>
-        <p>
-            Somos un grupo de apasionados por el hardware, los videojuegos y la tecnología. Esta tienda nació de largas charlas entre amigos que soñaban con armar las mejores PCs posibles, 
-            no solo para jugar, sino también para crear y competir. Con el tiempo, transformamos esa pasión en un e-commerce que combina nuestra experiencia técnica con un enfoque cercano y personalizado.
-        </p>
-        <p>
-            Cada integrante del equipo aporta su conocimiento en áreas como el soporte técnico, la atención al cliente, la selección de componentes y el diseño de equipos,
-            trabajando juntos para que cada computadora armada sea única y esté lista para rendir al máximo desde el primer encendido.
-        </p>
-    </section>
 
-        <h2>¿Qué nos caracteriza?</h2>
-
-    <section class="contenedor-caracteristicas">
-        
-
-            <div class="estilo-caracteristica">
+                <h2 class="titulo-caracteristicas">¿Qué nos caracteriza?</h2>
+        <div class="contenedor-caracteristicas">
+        <aside class="estilo-caracteristica">
                 <img class="caracteristica" src="../assets/caracteristicas/personalizacion.png" alt="personalizacion">
-                <h3>Personalización total para una experiencia de juego inigualable.</h3>
+                <h3 class="slogan-caracteristicas">Personalización total para una experiencia de juego inigualable.</h3>
                 <p>Ofrecemos un servicio de ensamblaje a medida, adaptado a tus necesidades específicas.</p>
-            </div>
-            <div class="estilo-caracteristica">
+        </aside>
+        <aside class="estilo-caracteristica">
                 <img class="caracteristica" src="../assets/caracteristicas/chip.png" alt="chip">
-                <h3>Componentes de alta calidad para un rendimiento óptimo en cada partida.</h3>
+                <h3 class="slogan-caracteristicas">Componentes de alta calidad para un rendimiento óptimo </h3>
                 <p>Seleccionamos solo los mejores componentes para garantizar la máxima durabilidad y rendimiento.</p>
-            </div>
-            <div class="estilo-caracteristica">
+        </aside>
+        <aside class="estilo-caracteristica">
                 <img class="caracteristica" src="../assets/caracteristicas/asesoria.png" alt="asesoria">
-                <h3>Asesoría experta para ayudarte a elegir la configuración perfecta.</h3>
+                <h3 class="slogan-caracteristicas">Asesoría experta para ayudarte a elegir la configuración perfecta.</h3>
                 <p>Nuestro equipo de expertos está listo para guiarte en cada paso del proceso.</p>
-            </div>
+        </aside>
         </div>
+
     </section>
 
-            <h2>Nuestro equipo</h2>
     
-    <section class="equipo">
-    
-            <div class="integrante">
+
+    <section>
+
+            <h2 class="titulo-nuestro-equipo">Nuestro equipo</h2>
+
+            <div class="equipo">
+                <div class="fila-uno">
+            <aside class="integrante">
                 <img class="card-circular" src="../assets/fotos-de-nuestro-equipo/juan.png" alt="juan">
                 <h3>Juan Pérez</h3>
                 <p class="tarea">Especialista en armado de PCs</p>
                 <p>Apasionado del hardware y los videojuegos competitivos. Juan se encarga de que cada equipo esté ensamblado con precisión, testeado y listo para rendir al máximo desde el primer momento.</p>
-            </div>
+            </aside>
             
-            <div class="integrante">
+            <aside class="integrante">
                 <img class="card-circular" src="../assets/fotos-de-nuestro-equipo/lucia.png" alt="lucia">
                 <h3>Lucía Torres</h3>
                 <p class="tarea">Soporte técnico y atención al cliente</p>
                 <p>Siempre dispuesta a ayudarte. Lucía es quien te guía si tenés dudas, problemas o simplemente querés saber qué configuración te conviene. Su prioridad: que tengas la mejor experiencia.</p>
-            </div>
-            <div class="integrante">
+            </aside>
+
+            <aside class="integrante">
                 <img class="card-circular" src="../assets/fotos-de-nuestro-equipo/tomas.png" alt="tomas">
                 <h3>Tomás Vidal</h3>
                 <p class="tarea">Tester y control de calidad</p>
                 <p>Antes de que tu equipo llegue a tus manos, Tomás lo prueba a fondo. Verifica compatibilidad, temperaturas, rendimiento y estabilidad para que todo funcione como debe.</p>
+            </aside>
             </div>
-            <div class="integrante">
+
+            <div class="fila-dos">
+
+            <aside class="integrante">
                 <img class="card-circular" src="../assets/fotos-de-nuestro-equipo/martina.png" alt="martina">
                 <h3>Martina Ríos</h3>
                 <p class="tarea">Asesora en configuración personalizada</p>
                 <p>Martina escucha lo que necesitás y te propone la mejor combinación de componentes. Ya sea que quieras una PC para jugar, editar o stremear, ella te ayuda a elegir lo ideal.</p>
-            </div>
-            <div class="integrante">
+            </aside>
+            
+            <aside class="integrante">
                 <img class="card-circular" src="../assets/fotos-de-nuestro-equipo/lucio.png" alt="lucio">
                 <h3>Lucio Brandoni</h3>
                 <p class="tarea">Diseñador y Desarrollador de la tienda online</p>
                 <p>Lucio es quien se asegura de que la web funcione bien, sea fácil de navegar y siempre esté actualizada. También diseña el look de la marca para que refleje nuestra identidad gamer.</p>
+            </aside>
             </div>
-        
+            </div>
     </section>
-<p>Y detrás de ellos, un equipo completo de técnicos, logísticos y creativos que comparten la misma pasión por la tecnología y los videojuegos.</p>
+    </section>
+    
 </main>
 
 <footer>
@@ -167,6 +186,8 @@
         </aside>
         </div>      
     </section>
+    </section>
+
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 
