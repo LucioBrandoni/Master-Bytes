@@ -775,4 +775,35 @@ padding: 7px;
     height: auto;
   }
 
+ .footer-principal {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+.footer-wrapper {
+    margin-left: 0px;  
+
+}
+  .footer-redes {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+
+.logo-redes {
+    height: 24px;
+}
+
+
+  .seccion-footer a {
+    color: black;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+
 }
