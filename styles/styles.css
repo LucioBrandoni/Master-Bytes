@@ -786,15 +786,15 @@ padding: 7px;
     margin-left: 0;
     padding: 0 15px;
 }
-
 .footer-redes {
-    flex-direction: column;
+    flex-direction:row;
     align-items: center;
     gap: 10px;
 }
 
 .logo-redes {
     height: 28px;
+    display: flex;
 }
 
 .seccion-footer a {
