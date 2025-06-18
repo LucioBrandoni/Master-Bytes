@@ -702,108 +702,108 @@ padding: 7px;
 
 @media (max-width: 430px) {
 
-  .slogan {
+.slogan {
     text-align: center;
     padding: 20px;
-  }
+}
 
-  .titulo-inicio {
+.titulo-inicio {
     font-size: 18px;
-  }
+}
 
-  .subtitulo-inicio {
+.subtitulo-inicio {
     font-size: 16px;
-  }
+}
 
-  .boton-historia {
+.boton-historia {
     font-size: 12px;
     padding: 6px 10px;
-  }
+}
 
-  .productos-destacados {
+.productos-destacados {
     font-size: 18px;
     text-align: center;
-  }
+}
 
-  .contenedor-tarjetas {
+.contenedor-tarjetas {
     grid-template-columns: 1fr;
     padding: 0 10px;
-  }
+}
 
-  .tarjetas-productos p {
+.tarjetas-productos p {
     font-size: 14px;
-  }
+}
 
-  .tarjetas-productos h3 {
+.tarjetas-productos h3 {
     font-size: 16px;
-  }
+}
 
-  .boton-tarjeta {
+.boton-tarjeta {
     font-size: 12px;
     padding: 6px;
-  }
+}
 
-  .contenedor-listo-dudas {
+.contenedor-listo-dudas {
     grid-template-columns: 1fr;
     gap: 40px;
     padding: 0 10px;
-  }
+}
 
-  .titulo-avanzar,
-  .titulo-dudas {
+.titulo-avanzar,
+.titulo-dudas {
     font-size: 20px;
     text-align: center;
-  }
+}
 
-  .ir-carrito,
-  .contactate-aqui {
+.ir-carrito,
+.contactate-aqui {
     font-size: 12px;
     padding: 6px;
-  }
+}
 
-  .navbar-toggler {
+.navbar-toggler {
     margin-left: auto;
-  }
+}
 
-  .form-control,
-  .btn {
+.form-control,
+.btn {
     font-size: 12px;
-  }
+}
 
-  .logo-main {
+.logo-main {
     max-width: 140px;
     height: auto;
-  }
+}
 
- .footer-principal {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
+.footer-principal {
+    display: flex;
+    justify-content:center;
+    flex-flow: row wrap; 
+    width: 100%;
+    
+
+}
 
 .footer-wrapper {
     margin-left: 0px;  
 
 }
-  .footer-redes {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
 
 
 .logo-redes {
     height: 24px;
 }
 
+.footer-redes{
+    display: flex;
+}
 
-  .seccion-footer a {
+.seccion-footer a {
     color: black;
     display: inline-block;
     margin-bottom: 5px;
     font-size: 14px;
-  }
+}
 
 
 }
