@@ -10,15 +10,19 @@ body{
 font-family: 'Source Sans 3', sans-serif;
 font-size: 1rem;
 }
+
+
 .header-flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
     height: 20vh; /* o la altura que quieras */
-    flex-wrap: wrap; /* para que se adapte en pantallas pequeñas */
+     /* para que se adapte en pantallas pequeñas */
 }
-
+.navbar-toggler {
+    border: none;
+}
 .titulo-inicio{
     font-family: 'Lato', sans-serif;
     font-size: 32px;
@@ -58,8 +62,8 @@ font-size: 16px ;
     font-size: 32px;
 }
 .logo-main {
-    max-height: 80px;
-    flex-shrink: 0; /* que no se achique */
+    max-width: 180px;
+    height: auto;
 }
 
 .form-busqueda {
@@ -68,6 +72,7 @@ font-size: 16px ;
     display: flex;
     gap: 5px;
 }
+
 
 .navbar ul {
     display: flex;
@@ -435,6 +440,7 @@ main button:hover {
 }
 .titulo-contacto{
     color: #3193bb;
+    font-size: 32px;
 
 }
 
@@ -444,15 +450,28 @@ main button:hover {
 
 .titulo-novedades{
     color: #3193bb;
+    font-size: 32px;
 }
 
-.footer-principal {
+.footer-principal  {
     display: flex;
-    justify-content:space-between;
     flex-flow: row wrap; 
-    width: 100%;
+    justify-content:center;
+    
     
 
+}
+.seccion-footer {
+    align-items: center;
+    width: 100%;
+    padding: 20px 75px;
+}
+.lista-footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 20px 75px;
+    list-style: none;
 }
 
 .footer-wrapper {
@@ -480,13 +499,14 @@ main button:hover {
     color:white !important;
     background-color: #3193bb;
     padding: 10px;
-
+    display: inline-block;
 }
 
 .seccion-footer a.active  {
     color: black ;
     font-weight: bold;
 }
+
 
 /* sección carrito */
 
@@ -597,9 +617,8 @@ main button:hover {
     height: 1px;
     background-color:  #3193bb;
     margin: 1rem 0;
+
 }
-
-
 @media (max-width:999px){
 
 .container header-flex{
@@ -612,7 +631,18 @@ main button:hover {
     margin: 0 auto;
     }
 
+.logo-main {
+    max-width: 160px;
+}
 
+.titulo-contacto{
+    font-size: 28px;
+
+}
+.titulo-novedades{
+    color: #3193bb;
+    font-size: 28px;
+}
 .titulo-inicio{
     
     font-family: 'Lato', sans-serif;
@@ -646,7 +676,10 @@ main button:hover {
 .contactate-aqui{
 font-size: 14px ;
 }
-}
+
+
+
+
 
 @media (max-width:780px){
 
@@ -665,6 +698,9 @@ font-size: 14px ;
     gap: 100px;
 }
 
+.titulo-contacto{
+    font-size: 24px;
+}
 
 .titulo-inicio{
     
@@ -682,6 +718,8 @@ font-size: 14px ;
     font-size: 14px ;
     padding: 5px;
 }
+
+
 .titulo-avanzar{
     font-size: 24px;
 }
@@ -698,6 +736,13 @@ font-size: 14px ;
 font-size: 12px ;
 padding: 7px;
 }
+
+.lista-footer {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px 50px;
+}
+
+}
 }
 
 @media (max-width: 430px) {
@@ -706,7 +751,9 @@ padding: 7px;
     text-align: center;
     padding: 20px;
 }
-
+.titulo-contacto{
+    font-size: 20px;
+}
 .titulo-inicio {
     font-size: 18px;
 }
@@ -775,41 +822,14 @@ padding: 7px;
     height: auto;
 }
 
-.footer-principal {
-    flex-direction: column;
-    align-items: center;
+
+.lista-footer {
+    grid-template-columns: 1fr;
+    padding: 20px 20px;
     text-align: center;
-    gap: 20px;
-}
-
-.footer-wrapper {
-    margin-left: 0;
-    padding: 0 15px;
-}
-.footer-redes {
-    flex-direction:row;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo-redes {
-    height: 28px;
-    display: flex;
-}
-
-.seccion-footer a {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 14px;
-}
-
-.footer-principal article ul li {
-    font-size: 14px;
-}
-
-.footer-principal article {
-    width: 100%;
 }
 
 
 }
+
+
