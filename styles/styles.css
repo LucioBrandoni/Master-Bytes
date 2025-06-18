@@ -18,18 +18,44 @@ font-size: 1rem;
     height: 20vh; /* o la altura que quieras */
     flex-wrap: wrap; /* para que se adapte en pantallas pequeñas */
 }
-#menu-toggle {
-    display: none;
+
+.titulo-inicio{
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
 }
 
-#btn-hamburguesa {
-    display: none; /* oculto por defecto */
+.subtitulo-inicio{
+    font-family: 'Lato', sans-serif;
     font-size: 28px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    margin-left: auto;
+}
+.titulos-destacados{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 40px;
+}
+.productos-destacados{
+    font-size: 32px ;
+}
+
+.boton-historia{
+    font-size: 18px ;
+}
+
+.ir-carrito{
+    font-size: 16px ;
+}
+.contactate-aqui{
+font-size: 16px ;
+}
+
+
+.titulo-avanzar{
+    font-size: 32px;
+}
+
+.titulo-dudas{
+    font-size: 32px;
 }
 .logo-main {
     max-height: 80px;
@@ -106,11 +132,7 @@ padding: 10px;
 
 }
 
-.ajustando-banner {
-    width: 100%; 
-    display: flex;
-    justify-content: center;
-}
+
 
 .banner {
     width: 100%; 
@@ -374,12 +396,7 @@ main button:hover {
     border-color: #36d7b7 !important;
 }
 
-.titulos-destacados{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 40px;
-}
+
 .contenedor-listo-dudas{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -402,7 +419,6 @@ main button:hover {
     background-color:#3193bb; 
     margin: 50px 0;
     }
-
 
 
     /* seccion contacto */
@@ -429,8 +445,6 @@ main button:hover {
 .titulo-novedades{
     color: #3193bb;
 }
-
-
 
 .footer-principal {
     display: flex;
@@ -586,4 +600,179 @@ main button:hover {
 }
 
 
+@media (max-width:999px){
 
+.container header-flex{
+        width: 100%;
+    }
+.contenedor-tarjetas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+    margin: 0 auto;
+    }
+
+
+.titulo-inicio{
+    
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+}
+.subtitulo-inicio{
+    font-family: 'Lato', sans-serif ;
+    font-size: 22px ;
+}
+
+.productos-destacados{
+    font-size: 24px ;
+}
+
+.boton-historia{
+    font-size: 16px ;
+    padding: 7px 10px;
+}
+
+.titulo-avanzar{
+    font-size: 28px;
+}
+
+.titulo-dudas{
+    font-size: 28px;
+}
+
+.ir-carrito{
+    font-size: 14px ;
+}
+.contactate-aqui{
+font-size: 14px ;
+}
+}
+
+@media (max-width:780px){
+
+.contenedor-tarjetas{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: fit-content;
+    gap: 20px 30px;
+    margin: 0 auto;
+    }
+.contenedor-listo-dudas{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    margin: 50px auto;
+    gap: 100px;
+}
+
+
+.titulo-inicio{
+    
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+}
+.subtitulo-inicio{
+    font-family: 'Lato', sans-serif ;
+    font-size: 20px;
+}
+.productos-destacados{
+    font-size: 22px ;
+}
+.boton-historia{
+    font-size: 14px ;
+    padding: 5px;
+}
+.titulo-avanzar{
+    font-size: 24px;
+}
+
+.titulo-dudas{
+    font-size: 24px;
+}
+
+.ir-carrito{
+    font-size: 12px ;
+    padding: 7px;
+}
+.contactate-aqui{
+font-size: 12px ;
+padding: 7px;
+}
+}
+
+@media (max-width: 430px) {
+
+  .slogan {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .titulo-inicio {
+    font-size: 18px;
+  }
+
+  .subtitulo-inicio {
+    font-size: 16px;
+  }
+
+  .boton-historia {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .productos-destacados {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .contenedor-tarjetas {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  .tarjetas-productos p {
+    font-size: 14px;
+  }
+
+  .tarjetas-productos h3 {
+    font-size: 16px;
+  }
+
+  .boton-tarjeta {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .contenedor-listo-dudas {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 10px;
+  }
+
+  .titulo-avanzar,
+  .titulo-dudas {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .ir-carrito,
+  .contactate-aqui {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+  }
+
+  .form-control,
+  .btn {
+    font-size: 12px;
+  }
+
+  .logo-main {
+    max-width: 140px;
+    height: auto;
+  }
+
+}
