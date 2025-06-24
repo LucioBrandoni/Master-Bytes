@@ -17,12 +17,54 @@ font-size: 1rem;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    height: 20vh; /* o la altura que quieras */
+    height: 20vh;
      /* para que se adapte en pantallas pequeñas */
 }
 .navbar-toggler {
     border: none;
 }
+
+/* Estilos personalizados para el offcanvas */
+
+#menuOffcanvas {
+  background-color: #3193bb !important;
+  color: white !important;
+}
+
+#menuOffcanvas .nav-link {
+  color: white !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+
+#menuOffcanvas .nav-link:hover {
+  color:#30e8bf !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+#menuOffcanvas .btn-close {
+  filter: invert(1);
+}
+
+#menuOffcanvas input.form-control {
+  border: 2px solid #30e8bf;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 6px rgba(48, 232, 191, 0.4);
+}
+
+#menuOffcanvas .btn-outline-success {
+  border-color: #30e8bf;
+  color: #30e8bf;
+}
+
+#menuOffcanvas .btn-outline-success:hover {
+  background-color: #30e8bf;
+  color: #003f4e;
+}
+
+
 .titulo-inicio{
     font-family: 'Lato', sans-serif;
     font-size: 32px;
