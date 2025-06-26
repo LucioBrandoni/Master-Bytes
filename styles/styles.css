@@ -843,7 +843,7 @@ padding: 7px;
 }
 
 .contenedor-caracteristicas {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     padding: 0 20px;
 }
@@ -855,18 +855,18 @@ padding: 7px;
 }
 
 .fila-uno {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
 }
 
 .fila-dos {
-    flex-direction: column;
+    flex-direction: row;
     gap: 40px;
+    justify-content: center;
 }
 
 .integrante {
-    width: 90%;
-    max-width: 320px;
+    width: 300px;
     margin: 70px auto 0;
 }
 
@@ -956,7 +956,29 @@ padding: 7px;
     text-align: center;
 }
 
+.contenedor-caracteristicas,
+.fila-uno {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px;
+}
 
+.estilo-caracteristica {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.fila-dos {
+    flex-direction: column;
+    gap: 40px;
+}
+
+.integrante {
+    width: 90%;
+    max-width: 320px;
+    margin: 70px auto 0;
+}
 }
 
 }
