@@ -258,7 +258,7 @@ main button:hover {
 
 .contenedor-tarjetas.inicio .tarjetas-productos {
     max-width: 320px;
-    flex: 1 1 250px;
+    flex: 1 1 320px;
 }
 .tienda{
     display: flex;
@@ -776,6 +776,7 @@ font-size: 14px ;
     grid-template-columns: repeat(1, 1fr);
 
     }
+
 .contenedor-listo-dudas{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -783,7 +784,14 @@ font-size: 14px ;
     margin: 50px auto;
     gap: 100px;
 }
+.contenedor-tarjetas.inicio {
+    justify-content: center;
 
+}
+.contenedor-tarjetas.inicio .tarjetas-productos {
+    flex: 1 1 100%;
+    max-width: 320px;
+}
 .titulo-contacto{
     font-size: 24px;
 }
