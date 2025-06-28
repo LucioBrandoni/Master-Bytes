@@ -864,6 +864,7 @@ padding: 7px;
 .carrito-totales {
     margin-top: 2rem;
     text-align: center;
+    justify-content: center;
 }
 
 .seguir-comprando {
@@ -892,12 +893,11 @@ padding: 7px;
     list-style: none;
     padding: 0;
     margin: 0;
-    
+  
 }
 .lista-totales li{
     justify-content: center;
-    text-align: center;
-
+    
 }
 .imagen-producto{
     width: 100px;
