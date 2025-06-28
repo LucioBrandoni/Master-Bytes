@@ -356,30 +356,30 @@ main button:hover {
 
 .titulo-nuestro-equipo{
     text-align: center;  
+    margin: 50px auto;
 }
 
 
-.contenedor-caracteristicas{
+.contenedor-caracteristicas {
     display: grid;
-    grid-template-columns: repeat(3,   1fr);
-    max-width: fit-content;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    max-width: 100%;
     margin: 50px auto;
     gap: 45px;
-    
+    place-items: center; 
 }
 
-
-.estilo-caracteristica{
-    display: flex;
-    flex-flow: column ;
-    justify-content:center;
-    align-items: center;
+.estilo-caracteristica {
+    width: 100%;
+    max-width: 320px;
     text-align: center;
-    width: 400px;
-    box-shadow: 0 0 7px #3193bb;
+    padding: 16px 24px;
     border-radius: 10px;
-    padding: 10px 30px;
-
+    box-shadow: 0 0 7px #3193bb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .slogan-caracteristicas{
@@ -390,32 +390,25 @@ main button:hover {
 }
 
 .equipo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:30px
-}
-
-.fila-uno {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+    justify-content: space-around;
+    width: 100%;
 }
-
-.fila-dos {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-}
-.integrante{
-    position: relative; /* necesario para posicionar la imagen dentro */
-    width: 300px;
+.integrante {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
     box-shadow: 0 0 10px #3193bb;
     margin-top: 70px;
-    padding-top: 60px; 
+    padding-top: 60px;
     background-color: white;
     border-radius: 10px;
-    
+
 }
 
 .integrante h3 {
@@ -440,15 +433,15 @@ main button:hover {
     text-align: center;
     margin: 10px 15px 20px;
 }
-.card-circular{ 
+.card-circular {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid white; 
+    border: 1px solid white;
     box-shadow: 0 0 10px #3193bb;
     position: absolute;
-    top: -50px; /* sobresale 50px hacia arriba */
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -505,7 +498,6 @@ main button:hover {
     align-items: center;
     
 }
-
 
 
 .linea-divisoria {
@@ -772,9 +764,7 @@ font-size: 14px ;
 @media (max-width:768px){
     
 .contenedor-tarjetas{
-
     grid-template-columns: repeat(1, 1fr);
-
     }
 
 .contenedor-listo-dudas{
@@ -842,35 +832,14 @@ padding: 7px;
     
 }
 
-.contenedor-caracteristicas {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding: 0 20px;
-}
+.equipo {
 
-.estilo-caracteristica {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.fila-uno {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-}
-
-.fila-dos {
-    flex-direction: row;
-    gap: 40px;
-    justify-content: center;
-}
-
-.integrante {
-    width: 300px;
-    margin: 70px auto 0;
+    gap: 25px;
 }
 
 }
+
+
 
 @media (max-width: 430px) {
 
@@ -955,30 +924,9 @@ padding: 7px;
     padding: 20px 20px;
     text-align: center;
 }
+.equipo {
 
-.contenedor-caracteristicas,
-.fila-uno {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 0 20px;
-}
-
-.estilo-caracteristica {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.fila-dos {
-    flex-direction: column;
-    gap: 40px;
-}
-
-.integrante {
-    width: 90%;
-    max-width: 320px;
-    margin: 70px auto 0;
+    gap: 25px;
 }
 }
-
 }
