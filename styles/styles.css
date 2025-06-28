@@ -895,6 +895,7 @@ padding: 7px;
 }
 .lista-totales li{
     justify-content: center;
+    text-align: center;
 
 }
 .imagen-producto{
