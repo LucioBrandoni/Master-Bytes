@@ -551,7 +551,7 @@ main button:hover {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    padding: 20px 75px;
+    padding: 0 auto;
     list-style: none;
 }
 
@@ -858,6 +858,7 @@ padding: 7px;
     max-width: none;
     padding-left: 0;
     border-left: none;
+    text-align: center;
 }
 
 .carrito-totales {
@@ -885,11 +886,16 @@ padding: 7px;
     margin-bottom: 1rem;
 }
 
-.encabezado-productos,
+
 .lista-totales {
     list-style: none;
     padding: 0;
     margin: 0;
+    
+}
+.lista-totales li{
+    justify-content: center;
+
 }
 .imagen-producto{
     width: 100px;
@@ -996,6 +1002,7 @@ padding: 7px;
     grid-template-columns: 1fr;
     padding: 20px 20px;
     text-align: center;
+    
 }
 .equipo {
 
