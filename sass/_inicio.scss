@@ -1,0 +1,173 @@
+@use 'variables';
+@use 'mixins';
+
+
+/* Sección general de Inicio */
+.slogan {
+    @include mixins.flex-config($direction: column, $justify: center, $align: center, $gap: 20px);
+    margin-top: 20px;
+    color: variables.$color-primario;
+}
+
+.linea-divisoria {
+    height: 2px;
+    background-color: variables.$color-primario;
+    margin: 50px 0;
+}
+
+
+.ajustando-banner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.titulo-inicio {
+    @include mixins.titulo-estilo(variables.$fuente-secundaria, variables.$color-primario);
+    font-size: variables.$font-size-titulo-inicio;
+}
+
+.subtitulo-inicio {
+    @include mixins.titulo-estilo(variables.$fuente-secundaria, variables.$color-primario);
+    font-size: variables.$font-size-subtitulo-inicio;
+}
+
+.titulos-destacados {
+    @include mixins.flex-config($direction: column, $justify: center, $align: center);
+
+    .productos-destacados {
+        color: variables.$color-primario;
+        font-size: variables.$font-size-productos-destacados;
+        margin-bottom: 50px;
+    }
+}
+.contenedor-tarjetas-inicio {
+    display: flex; 
+    @include mixins.flex-config($justify: center, $gap: variables.$gap-tarjetas-vertical variables.$gap-tarjetas-horizontal, $wrap: wrap);
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+        @media (max-width: variables.$bp-tablet) {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        justify-content: center;
+        gap: 20px; 
+        padding: 0 10px; 
+        margin: 0 auto; 
+    }
+}
+
+.boton-historia {
+    @include mixins.boton-base($font-size: variables.$font-size-boton-historia);
+    border-radius: 8px;
+    &:hover {
+        @include mixins.button-hover-style;
+    }
+}
+.contenedor-listo-dudas {
+    @include mixins.flex-config($direction: row, $justify: center, $align: flex-start, $gap: 50px);
+    max-width: 1200px;
+    margin: 50px auto; 
+    padding: 0 20px;   
+
+    @media (max-width: variables.$bp-tablet) { 
+        flex-direction: column; 
+        align-items: center;    
+        gap: 30px;              
+    }
+
+    .listo-avanzar,
+    .dudas {
+        background-color: variables.$color-blanco; 
+        padding: 30px; 
+        border-radius: variables.$card-border-radius; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        text-align: center; 
+
+        flex-basis: 48%; 
+        flex-grow: 1;   
+        flex-shrink: 1; 
+        max-width: 550px; 
+
+    
+        h2 {
+            @include mixins.titulo-estilo(variables.$fuente-secundaria, variables.$color-primario);
+            font-size: variables.$font-size-titulo-avanzar;
+            margin-bottom: 15px; 
+
+        p {
+            color: variables.$color-gris-oscuro; // Color de texto
+            margin-bottom: 25px; // 
+            font-size: 1.1rem; 
+        }
+    }
+
+    .ir-carrito,
+    .contactate-aqui {
+
+        @include mixins.boton-base($font-size: 1rem, $padding: 12px 25px);
+        border-radius: 5px; // 
+        &:hover {
+            @include mixins.button-hover-style; //
+        }
+    }
+//
+
+
+/* Media Queries para _inicio.scss */
+@media (max-width: variables.$bp-tablet) { // 768px
+    .slogan {
+        gap: 15px;
+    }
+    .titulo-inicio {
+        font-size: 28px;
+    }
+    .subtitulo-inicio {
+        font-size: 24px;
+    }
+    .productos-destacados {
+        font-size: 28px;
+    }
+    .boton-historia {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .ir-carrito,
+    .contactate-aqui {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+}
+
+
+@media (max-width: variables.$bp-mobile) { // 430px
+    .slogan {
+        padding: 20px;
+    }
+    .titulo-inicio {
+        font-size: 18px;
+    }
+    .subtitulo-inicio {
+        font-size: 16px;
+    }
+    .boton-historia {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+}
+}

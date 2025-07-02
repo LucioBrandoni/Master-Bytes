@@ -1,0 +1,166 @@
+
+@use 'variables';
+@use 'mixins';
+@use 'sass:math';
+
+.footer-principal {
+    background-color: variables.$color-blanco; 
+    color: variables.$color-black; 
+    padding: variables.$footer-padding-y 0; 
+    font-size: variables.$footer-font-size;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+    text-align: center; 
+}
+
+
+.footer-row-top {
+    width: 100%; 
+    padding-bottom: 20px; 
+    
+    nav {
+        ul.footer-nav-links { 
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            gap: 20px; 
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap; 
+        }
+
+        ul.footer-nav-links li a {
+            color: variables.$color-black; 
+            text-decoration: none;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        ul.footer-nav-links li a:hover {
+            color: variables.$color-blanco;
+            font-weight: bold;
+            background-color: variables.$color-primario; 
+        }
+
+        ul.footer-nav-links li a.active {
+            color: variables.$color-black; 
+            font-weight: bold;
+        }
+    }
+}
+
+
+.footer-linea-divisoria {
+    width: 80%; 
+    height: 1px; 
+    background-color: variables.$color-primario; 
+    margin: 20px 0;
+}
+
+
+.footer-row-bottom {
+    width: 100%;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: flex-start;
+    padding-top: 20px; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.footer-info-group,
+.footer-copyright-group,
+.footer-redes-group {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    padding: 10px;
+    flex: 1; 
+    min-width: 200px;
+}
+
+.footer-info-group h3,
+.footer-copyright-group h3,
+.footer-redes-group h3 {
+    color: variables.$color-black; // Títulos de sección en negro
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.footer-copyright-group p {
+    margin: 0; // Elimina margen por defecto del párrafo
+}
+
+ul.lista-footer-vertical { // Clase específica para esta lista vertical
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; // Asegura que los ítems estén apilados verticalmente
+    gap: 5px; // Espacio entre ítems de la lista
+}
+
+/* Estilos para iconos de redes sociales */
+.footer-redes-iconos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: variables.$social-icon-margin; // Espacio entre iconos de redes
+    margin-top: 10px; // Espacio entre texto y logos
+}
+
+.logo-redes {
+    height: variables.$social-icon-size;
+    width: variables.$social-icon-size;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-redes:hover {
+    transform: scale(1.1);
+}
+
+/* Media Queries para responsividad del footer (Ajustar según necesites, esto es solo un punto de partida) */
+
+@media (max-width: variables.$bp-desktop) { // Ejemplo para tablets
+    .footer-row-top {
+        padding-bottom: 15px;
+    }
+    .footer-linea-divisoria {
+        margin: 15px 0;
+    }
+    .footer-row-bottom {
+        flex-direction: column; // Apila los grupos en móviles
+        align-items: center;
+        gap: 30px;
+    }
+    .footer-info-group,
+    .footer-copyright-group,
+    .footer-redes-group {
+        width: 100%; // Ocupa todo el ancho en móviles
+        max-width: 300px; // Ancho máximo para evitar que se estiren demasiado
+    }
+}
+
+@media (max-width: variables.$bp-tablet) { // Ejemplo para móviles pequeños
+    .footer-principal {
+        padding: math.div(variables.$footer-padding-y, 2) 20px; 
+    }
+    .footer-nav-links {
+        gap: 10px;
+        flex-direction: column; // Apila los enlaces de nav en móviles pequeños si no caben
+    }
+    .footer-row-top {
+        padding-bottom: 10px;
+    }
+    .footer-linea-divisoria {
+        margin: 10px 0;
+    }
+}

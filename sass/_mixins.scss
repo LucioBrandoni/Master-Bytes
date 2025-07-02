@@ -1,0 +1,131 @@
+@use 'variables';
+@use 'sass:color';
+@use 'sass:math';
+
+// Mixin flex-config
+@mixin flex-config($justify: flex-start, $align: stretch, $direction: row, $gap: 0, $wrap: nowrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    gap: $gap;
+    flex-wrap: $wrap;
+}
+
+@mixin search-input-button-style {
+    display: flex;
+    align-items: center;
+    border-radius: variables.$border-radius-base;
+    overflow: hidden;
+
+    input {
+        flex-grow: 1;
+        padding: 8px 12px;
+        border: none;
+        background-color: variables.$color-blanco; 
+        color: variables.$color-gris-oscuro; 
+        outline: none;
+        font-size: 1rem;
+
+        &::placeholder {
+            color: variables.$color-gris; 
+            opacity: 1; 
+        }
+    }
+
+    button {
+        background-color: variables.$color-primario; 
+        color: variables.$color-blanco; 
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            background-color: variables.$color-secundario;
+            color: variables.$color-blanco;
+        }
+    }
+}
+
+
+@mixin nav-link-style {
+    color: variables.$color-blanco; 
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: color 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease, padding 0.3s ease;
+
+    &:hover {
+        color: variables.$color-secundario; 
+    }
+ 
+    &.active {
+        color: variables.$color-secundario !important; 
+        
+    }
+}
+
+
+// Mixin para botones
+@mixin boton-base($font-size: 1rem, $padding: 10px 15px) {
+    cursor: pointer;
+    color: variables.$color-blanco;
+    border: 2px solid variables.$color-secundario;
+    background-color: variables.$color-primario;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    font-size: $font-size;
+    padding: $padding;
+}
+
+@mixin button-hover-style {
+    color: variables.$color-secundario-hover;
+    background-color: color.adjust(variables.$color-primario, $lightness: -10%); 
+}
+
+// Mixin para títulos
+@mixin titulo-estilo($font-family, $color) {
+    font-family: $font-family;
+    color: $color;
+}
+
+// Mixin para configuración de Grid
+@mixin grid-config($columns, $gap) {
+    display: grid;
+    grid-template-columns: $columns;
+    gap: $gap;
+}
+
+// Mixin para estilo de tarjetas/cards 
+@mixin tarjeta-estilo(
+    $shadow-color: variables.$color-shadow,
+    $border-color: transparent,
+    $radius: variables.$card-border-radius
+) {
+    background-color: variables.$color-blanco;
+    border-radius: $radius;
+    padding: variables.$padding-tarjeta;
+    box-shadow: 0 4px 8px $shadow-color;
+    border: 1px solid $border-color;
+}
+
+@mixin grid-centralizado(
+  $cols: 3,
+  $gap-vertical: 20px,
+  $gap-horizontal: 20px,
+  $max-width: 1200px
+) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  gap: $gap-vertical $gap-horizontal;
+  justify-content: center; 
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}

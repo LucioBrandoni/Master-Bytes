@@ -291,14 +291,6 @@ body {
     font-size: 14px;
     padding: 8px 12px;
   }
-  .contenedor-listo-dudas .listo-avanzar .contenedor-tarjetas-inicio,
-  .contenedor-listo-dudas .dudas .contenedor-tarjetas-inicio {
-    grid-template-columns: 1fr;
-    gap: 30px 20px;
-    justify-content: center;
-    max-width: 600px;
-    padding: 0 10px;
-  }
 }
 @media (max-width: 430px) {
   .contenedor-listo-dudas .listo-avanzar .slogan,
@@ -317,13 +309,6 @@ body {
   .contenedor-listo-dudas .dudas .boton-historia {
     font-size: 12px;
     padding: 6px 10px;
-  }
-  .contenedor-listo-dudas .listo-avanzar .contenedor-tarjetas-inicio,
-  .contenedor-listo-dudas .dudas .contenedor-tarjetas-inicio {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 340px; /* Ejemplo: 320px de tarjeta + 20px de padding = 340px */
-    padding: 0 10px;
   }
 }
 
@@ -1118,4 +1103,4 @@ main section.container.mt-4 {
   background-color: rgb(38.4110169492, 115.2330508475, 146.5889830508);
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=css.map */

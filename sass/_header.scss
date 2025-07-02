@@ -1,0 +1,59 @@
+
+@use 'variables';
+@use 'mixins';
+
+.header-flex {
+@include mixins.flex-config($justify: space-between, $align: center, $gap: 20px);
+    height: variables.$header-height;
+
+
+  .logo-main {
+    width: variables.$logo-max-width; 
+    height: auto;
+  }
+}
+
+.bg-custom {
+  background-color: variables.$color-primario !important;
+}
+
+.navbar-espaciada {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+form[role="search"] {
+  @include mixins.search-input-button-style;
+}
+
+.nav-link {
+  @include mixins.nav-link-style;
+}
+
+#menuOffcanvas ul li {
+    margin-bottom: 20px; 
+    
+}
+
+#menuOffcanvas {
+  background-color: variables.$color-primario !important;
+  color: variables.$color-blanco !important;
+
+
+  input, input::placeholder {
+    color: variables.$color-blanco !important;
+  }
+
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: variables.$color-secundario !important;
+    background-color: transparent;
+    border-radius: 8px;
+  }
+}
+

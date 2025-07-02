@@ -1,0 +1,311 @@
+
+@use 'variables';
+@use 'mixins';
+@use 'sass:color';
+.carrito {
+    margin-top: 50px; 
+    padding: 20px 0; 
+}
+
+.carrito-titulo {
+    text-align: center; 
+    margin-bottom: 30px;
+
+    h1 {
+        color: variables.$color-primario;
+        font-size: 2.5rem;
+    }
+}
+
+.carrito-principal {
+    @include mixins.flex-config($wrap: wrap, $justify: center, $gap: 20px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.carrito-productos {
+    flex: 3; 
+    min-width: 300px; 
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+}
+
+.carrito-totales {
+    flex: 1; 
+    min-width: 250px; 
+    border: 1px solid variables.$color-light-border;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px variables.$color-shadow;
+    background-color: variables.$color-light-background;
+}
+
+.encabezado-productos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    gap: 10px; 
+
+    li {
+        flex: 1;
+        text-align: center;
+        font-weight: bold;
+        color: variables.$color-gris-oscuro;
+
+        &:first-child { 
+            flex: 2; 
+            text-align: left;
+        }
+        &:last-child {
+            flex: 0.5;
+        }
+    }
+}
+
+.item-producto {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border: 1px solid variables.$color-light-border;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: variables.$border-radius-base;
+    background-color: variables.$color-blanco;
+    box-shadow: 0 2px 5px variables.$color-shadow;
+    gap: 15px; 
+    flex-wrap: wrap; 
+
+    .caracteristica-imagen-carrito {
+        flex-shrink: 0; 
+        width: 100px; 
+        height: auto; 
+    }
+
+    .imagen-producto {
+        max-width: 100%; 
+        height: auto; 
+        object-fit: contain;
+    }
+
+    .caracteristica-nombre-producto {
+        flex-grow: 1; 
+        min-width: 150px; 
+        margin: 0;
+    }
+
+    .nombre-producto {
+        margin: 0;
+        font-size: 1.1rem;
+        color: variables.$color-gris-oscuro;
+    }
+
+    .cantidad-producto {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        flex-shrink: 0;
+    }
+
+    .btn-cantidad {
+        background-color: variables.$color-primario;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: variables.$color-blanco;
+        }
+    }
+
+    .numero-cantidad { 
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: 0 5px;
+    }
+
+    .eliminar-producto { 
+        background-color: variables.$color-danger;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: color.adjust(variables.$color-success, $lightness: -5%);
+        }
+        flex-shrink: 0; 
+    }
+}
+
+.resumen-total {
+    @include mixins.flex-config($justify: space-between);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 1px solid variables.$color-light-grey-border;
+    padding-bottom: 10px;
+}
+
+.texto-total {
+    color: variables.$color-primario;
+}
+
+.valor-total {
+    color: variables.$color-black;
+}
+
+.boton-finalizar {
+    background-color: variables.$color-primario;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+
+    &:hover {
+        background-color: color.adjust(variables.$color-success, $lightness: -5%);
+        color: white;
+    }
+}
+
+.seguir-comprando {
+    background-color: variables.$color-primario;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color:variables.$color-success;
+        color: white;
+    }
+}
+
+.presupuesto{
+    background-color: variables.$color-primario;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color:variables.$color-success;
+        color: white;
+    }
+}
+
+/* Media queries para la sección de carrito */
+
+@media (max-width: variables.$bp-tablet) {
+    .carrito-principal {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .carrito-productos,
+    .carrito-totales {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .item-producto {
+        flex-direction: column; 
+        text-align: center;
+        gap: 10px;
+    }
+
+    .caracteristica-imagen-carrito {
+        margin-bottom: 10px;
+        width: 80px;
+    }
+
+    .imagen-producto {
+        width: 100%;
+        height: 80px; 
+    }
+
+    .cantidad-producto {
+        justify-content: center;
+    }
+
+    .carrito-titulo h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: variables.$bp-mobile) {
+    .carrito {
+        padding: 10px;
+    }
+
+    .carrito-titulo h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .item-producto {
+        padding: 10px;
+    }
+
+    .nombre-producto {
+        font-size: 1.1rem;
+    }
+
+    .btn-cantidad {
+        width: 25px;
+        height: 25px;
+        font-size: 1rem;
+    }
+
+    .numero-cantidad {
+        font-size: 1rem;
+    }
+
+    .eliminar-producto {
+        padding: 4px 8px;
+        font-size: 0.9rem;
+    }
+
+    .resumen-total {
+        font-size: 1.1rem;
+    }
+
+    .boton-finalizar {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+
+    .seguir-comprando {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

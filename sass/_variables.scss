@@ -1,0 +1,84 @@
+//colores
+$color-primario: #3193bb;
+$color-secundario: #30e8bf;
+$color-secundario-hover: #5bf4e2; // Nueva variable para el hover de botones
+$color-blanco: #ffffff;
+$color-blanco-transparente: rgba(255, 255, 255, 0.1);
+$color-black: #000000;
+$color-gris-oscuro: #333;
+$color-gris: #555;
+
+// fuentes tipografizas y tamaños
+$fuente-principal: 'Source Sans 3', sans-serif;
+$fuente-secundaria: 'Lato', sans-serif;
+
+$font-size-titulo-inicio: 32px;
+$font-size-subtitulo-inicio: 28px;
+$font-size-productos-destacados: 32px;
+$font-size-boton-historia: 18px;
+$font-size-ir-carrito: 16px;
+$font-size-contactate-aqui: 16px;
+$font-size-titulo-avanzar: 32px;
+$font-size-titulo-dudas: 32px;
+$color-footer-bg: #003f4e;
+
+
+//variables para productos
+$border-radius-base: 8px;
+$card-border-radius: 10px;
+$gap-productos-tienda: 50px;
+$gap-tarjetas-horizontal: 30px;
+$gap-tarjetas-vertical: 20px;
+$padding-tarjeta: 15px 10px;
+$max-width-tarjeta: 320px;
+$filter-width: 200px;
+$filter-padding: 15px;
+$filter-bg: #f9f9f9;
+$font-size-precio: 18px;
+$font-size-boton-tarjeta: 14px;
+$padding-boton-tarjeta: 5px 10px;
+$productos-imagen-width: 150px;
+$productos-imagen-padding: 10px;
+$color-negro-texto: #000;
+$max-width:1200px;
+
+//footer
+$footer-padding-y: 40px;
+$footer-font-size: 0.9rem;
+$footer-logo-max-width-desktop: 150px;
+$footer-logo-max-width-tablet: 120px;
+$footer-grid-gap-desktop: 30px;
+$footer-grid-gap-tablet: 20px;
+
+$social-icon-size: 30px;
+$social-icon-margin: 10px;
+$social-icon-margin-mobile: 5px;
+
+//responsive
+$bp-desktop: 1024px;
+$bp-tablet: 768px;
+$bp-mobile: 430px;
+
+//logo
+$logo-max-width: 180px;
+$header-height: 20vh;
+
+// carrito
+
+// Bordes y Sombras
+$color-light-border: #ddd;
+$color-light-grey-border: #eee;
+$color-shadow: rgba(0, 0, 0, 0.1);
+
+$color-danger: #dc3545;
+$color-success: #28a745;
+$color-secondary-button: #6c757d;
+$color-light-background: #f9f9f9;
+
+// Margen para secciones
+$section-margin-bottom: 80px;
+
+  $cols: 3;
+  $gap-vertical: 20px;
+  $gap-horizontal: 20px;
+  $max-width: 1200px;

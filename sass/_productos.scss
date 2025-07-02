@@ -1,0 +1,122 @@
+@use 'variables';
+@use 'mixins';
+
+.tienda {
+    @include mixins.flex-config($direction: row, $justify: center, $align: flex-start, $gap: variables.$gap-productos-tienda);
+    margin-bottom: 100px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px; 
+    }
+}
+
+.filtro {
+    width: variables.$filter-width;
+    padding: variables.$filter-padding;
+    background-color: variables.$filter-bg;
+    font-weight: bold;
+    color: variables.$color-primario;
+    @include mixins.tarjeta-estilo(
+        $shadow-color: variables.$color-primario,
+        $border-color: variables.$color-primario,
+        $radius: variables.$border-radius-base
+    );
+
+    summary {
+        list-style: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 0;
+        margin: 0;
+        outline: none;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+        &::marker {
+            content: none;
+        }
+    }
+
+    &[open] {
+        box-shadow: 0 0 10px variables.$color-primario;
+    }
+}
+
+.filtro-lista {
+    @include mixins.flex-config($direction: column, $gap: 10px);
+    margin-top: 10px;
+    padding-left: 0;
+    color: variables.$color-negro-texto;
+    font-weight: normal;
+}
+
+.divisor-filtros {
+    border-bottom: 2px solid variables.$color-primario;
+    height: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo-producto {
+    color: variables.$color-primario;
+    @include mixins.flex-config($direction: column, $wrap: wrap);
+    padding-bottom: 30px;
+    text-align: center; 
+}
+
+.contenedor-tarjetas {
+    @include mixins.grid-config(repeat(3, 1fr), variables.$gap-tarjetas-vertical variables.$gap-tarjetas-horizontal);
+    width: 100%;
+    padding: 0 20px;
+    justify-content: center;
+    margin-inline: auto;
+
+    @media (max-width: 1024px) { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px 20px;
+    }
+
+    @media (max-width: 768px) { 
+        grid-template-columns: 1fr; 
+        padding: 0 10px;
+    }
+}
+
+.tarjetas-productos {
+    @include mixins.flex-config($direction: column, $align: center, $justify: center);
+    max-width: variables.$max-width-tarjeta;
+    width: 100%;
+    height: auto;
+    padding: variables.$padding-tarjeta;
+    text-align: center;
+    @include mixins.tarjeta-estilo(
+        $shadow-color: variables.$color-primario,
+        $border-color: variables.$color-primario,
+        $radius: variables.$card-border-radius
+    );
+}
+
+.productos { // Imagen del producto dentro de la tarjeta
+    width: variables.$productos-imagen-width;
+    height: auto;
+    padding: variables.$productos-imagen-padding;
+}
+
+.precio {
+    font-family: variables.$fuente-secundaria;
+    font-size: variables.$font-size-precio;
+    font-weight: bolder;
+}
+
+.boton-tarjeta {
+    @include mixins.boton-base($padding: variables.$padding-boton-tarjeta, $font-size: variables.$font-size-boton-tarjeta);
+
+    &:hover {
+        color: variables.$color-primario;
+        background-color: variables.$color-blanco;
+    }
+}

@@ -1,0 +1,42 @@
+// _contacto.scss
+@use 'variables';
+@use 'mixins';
+
+// Estilos para la sección principal de contacto
+main section.container.mt-4 {
+    margin-bottom: variables.$section-margin-bottom;
+}
+.boton-sub {
+    @include mixins.boton-base;
+    &:hover {
+        @include mixins.button-hover-style;
+    }}
+// Estilos para el título de la sección de contacto
+.titulo-contacto {
+    color: variables.$color-primario;
+    font-size: variables.$font-size-titulo-dudas;
+
+    @media (max-width: variables.$bp-mobile) {
+        font-size: 20px;
+    }
+}
+
+// Estilos para el botón de "ENVIAR MENSAJE"
+.boton-enviar-mensaje {
+    // Incluye el mixin boton-base y pasa sus parámetros específicos
+    @include mixins.boton-base($font-size: 14px, $padding: 5px 20px);
+    border-radius: 5px; // Este es un estilo específico de este botón
+
+    // Responsive: Ajuste de tamaño del botón para móviles
+    @media (max-width: variables.$bp-mobile) {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    // Efecto hover
+    &:hover {
+        @include mixins.button-hover-style;
+    }
+    
+}
+
