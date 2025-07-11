@@ -11,7 +11,7 @@
     }
 }
 
-.filtro {
+.filtro { 
     width: variables.$filter-width;
     padding: variables.$filter-padding;
     background-color: variables.$filter-bg;
@@ -87,7 +87,7 @@
 }
 
 .tarjetas-productos {
-    @include mixins.flex-config($direction: column, $align: center, $justify: center);
+    @include mixins.flex-config($direction: column, $align: center, $justify: space-between);
     max-width: variables.$max-width-tarjeta;
     width: 100%;
     height: auto;
