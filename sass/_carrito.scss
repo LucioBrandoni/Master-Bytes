@@ -42,13 +42,13 @@
     background-color: variables.$color-light-background;
 }
     .lista-totales {
-        list-style: none; // Elimina los puntos de la lista por defecto
-        padding: 0; // Elimina el padding por defecto de la lista
-        margin: 0; // Elimina el margen por defecto de la lista
+        list-style: none; 
+        padding: 0; 
+        margin: 0; 
     }
 
     .lista-totales h2 { 
-        text-align: left; // Alinea el título a la izquierda
+        text-align: left; 
         margin-top: 0; 
         margin-bottom: 20px; 
         
