@@ -106,7 +106,7 @@
             margin-bottom: 15px; 
 
         p {
-            color: variables.$color-gris-oscuro; // Color de texto
+            color: variables.$color-gris-oscuro; 
             margin-bottom: 25px; // 
             font-size: 1.1rem; 
         }
@@ -118,13 +118,13 @@
         @include mixins.boton-base($font-size: 1rem, $padding: 12px 25px);
         border-radius: 5px; // 
         &:hover {
-            @include mixins.button-hover-style; //
+            @include mixins.button-hover-style; 
         }
     }
-//
 
 
-/* Media Queries para _inicio.scss */
+
+/* Media Queries para  inicio */
 @media (max-width: variables.$bp-tablet) { // 768px
     .slogan {
         gap: 15px;

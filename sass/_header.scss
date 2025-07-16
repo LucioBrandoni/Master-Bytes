@@ -17,10 +17,19 @@
   }
 }
 
-.bg-custom {
-  background-color: variables.$color-primario !important;
-}
 
+.logo-master-bytes {
+  height: 45px;
+  object-fit: contain;
+}
+.navbar {
+  background-color: transparent;
+
+  @media (min-width: 992px) {
+    // Aplica el fondo solo en escritorio 
+    background-color: variables.$color-primario;
+  }
+}
 .navbar-espaciada {
   padding-left: 0;
   padding-right: 0;

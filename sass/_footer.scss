@@ -89,22 +89,22 @@
 .footer-info-group h3,
 .footer-copyright-group h3,
 .footer-redes-group h3 {
-    color: variables.$color-black; // Títulos de sección en negro
+    color: variables.$color-black; 
     margin-bottom: 15px;
     font-size: 1.1rem;
 }
 
 .footer-copyright-group p {
-    margin: 0; // Elimina margen por defecto del párrafo
+    margin: 0; 
 }
 
-ul.lista-footer-vertical { // Clase específica para esta lista vertical
+ul.lista-footer-vertical { 
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; // Asegura que los ítems estén apilados verticalmente
-    gap: 5px; // Espacio entre ítems de la lista
+    flex-direction: column; 
+    gap: 5px; 
 }
 
 /* Estilos para iconos de redes sociales */
@@ -112,8 +112,8 @@ ul.lista-footer-vertical { // Clase específica para esta lista vertical
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: variables.$social-icon-margin; // Espacio entre iconos de redes
-    margin-top: 10px; // Espacio entre texto y logos
+    gap: variables.$social-icon-margin; 
+    margin-top: 10px; 
 }
 
 .logo-redes {
@@ -127,9 +127,9 @@ ul.lista-footer-vertical { // Clase específica para esta lista vertical
     transform: scale(1.1);
 }
 
-/* Media Queries para responsividad del footer (Ajustar según necesites, esto es solo un punto de partida) */
+/* Media Queries para footer responsive */
 
-@media (max-width: variables.$bp-desktop) { // Ejemplo para tablets
+@media (max-width: variables.$bp-desktop) {
     .footer-row-top {
         padding-bottom: 15px;
     }
@@ -137,25 +137,25 @@ ul.lista-footer-vertical { // Clase específica para esta lista vertical
         margin: 15px 0;
     }
     .footer-row-bottom {
-        flex-direction: column; // Apila los grupos en móviles
+        flex-direction: column; 
         align-items: center;
         gap: 30px;
     }
     .footer-info-group,
     .footer-copyright-group,
     .footer-redes-group {
-        width: 100%; // Ocupa todo el ancho en móviles
-        max-width: 300px; // Ancho máximo para evitar que se estiren demasiado
+        width: 100%; 
+        max-width: 300px; 
     }
 }
 
-@media (max-width: variables.$bp-tablet) { // Ejemplo para móviles pequeños
+@media (max-width: variables.$bp-tablet) { 
     .footer-principal {
         padding: math.div(variables.$footer-padding-y, 2) 20px; 
     }
     .footer-nav-links {
         gap: 10px;
-        flex-direction: column; // Apila los enlaces de nav en móviles pequeños si no caben
+        flex-direction: column; 
     }
     .footer-row-top {
         padding-bottom: 10px;
